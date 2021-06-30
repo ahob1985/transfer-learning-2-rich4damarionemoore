@@ -63,12 +63,15 @@ function buildButtons() {
   trainButton.parent(buttonDiv);
   trainButton.mousePressed(function () {
     // new code blow
-
+   happyButton.style("display", "none")
+   sadButton.style("display", "none")
+   trainButton.style("display", "none")
     textP.html("New model training, please wait...");
     classifier.train(whileTraining);
   });
   // new code below
-
+  
+saveButton = createButton("Save Model")
   buttonDiv.style("display", "none");
 }
 
